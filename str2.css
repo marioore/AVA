@@ -1,0 +1,196 @@
+/* OSNOVNO UREĐIVANJE ******************************************************************************* */
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    margin: 0;
+    background-color: #eeeeee;
+  color: #333333;
+}
+
+h1,h2,h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #858585;
+  padding: 4px;
+}
+
+nav ul,
+aside ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 200%;
+}
+
+a{
+  text-decoration: none;
+}
+a:visited{
+  color: purple !important;
+  }
+  
+a:hover{
+    color: gold !important;
+  }
+
+.aspect-3-2 img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+  }
+
+  p {
+    max-width: 75ch;
+    margin: 1.25em auto;
+  }
+
+  h2 + p {
+    font-family: "Lora", serif;
+    font-size: 1.2em;
+    text-align: justify;
+  }
+
+  figure {
+    text-align: center;
+    font-family: "Lora", serif;
+  }
+
+/* LAYOUT ******************************************************************************************** */
+
+/* GLAVNI GRID, DIJELI STRANICU NA 3 DIJELA STRANICA JE VISOKA CIJELI VIEWPORT*/
+/* PRVI I ZADNJI DIO SU VISOKI KOLIKO JE VISOK SADRŽAJ SREDNJI ZAUZIMA OSTALO */
+.grid1{
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* DRUGI GRID, STAVLJA PRAZNI PROSTOR SA STRANA SADRŽAJA TAKO DA JE SADRŽAJ ŠIROK DO 1200PX I U SREDINI */
+.grid2{
+    display:grid;
+    grid-template-columns: 1fr minmax(300px,1200px) 1fr;
+    gap: 10px;
+}
+
+/* TREĆI ZAJEDNIČKI GRID SLUŽI ZA MEDIA QUERIES*/
+.grid3{
+    display: grid;
+gap: 10px;
+}
+
+.grid4{display: grid;
+grid-row: 3/4;
+text-align: left;
+justify-items: center;
+}
+
+
+/* Elementi s ovim selektorom se nalaze u srednjem stupcu */
+.content-width {
+    grid-column: 2/3;
+}
+/* Elementi s ovim selektorom se protežu punom širinom stranice - to je za banner i footer*/
+.full-width {
+    grid-column: 1/4;
+}
+ /* Sadržaj elemenata s ovim selektorom se nalazi vertikalno u sredini */ 
+.vertical-align {
+    align-items: center;
+}
+
+input,
+textarea
+{width: 95vw;
+padding: 10px;
+max-width: 600px;}
+
+
+/* HEADER ********************************************************************************************* */
+.header1{
+  text-transform: uppercase;
+}
+
+/* BANNER********************************************************************************************** */
+.banner{
+    background:  url(slike/biker.jpg) center 65% / cover no-repeat;
+    height: 400px;
+    color: white;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.banner p {
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: grid;
+  align-items: center;
+  padding: 20px;
+}
+
+/* MAIN CONTENT ************************************************************************************** */
+.page-title {
+  border-bottom: 1px solid goldenrod;
+  padding-bottom: 5px;
+}
+
+.obr1{line-height: 2px;
+}
+/* FOOTER ******************************************************************************************** */
+
+.footer {
+  background-color: #333333;
+  color: #eeeeee;
+  text-align: center;
+  grid-row: 4/5;
+}
+
+.footer a {
+  color: #eeeeee;
+}
+
+.copyright {
+  text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */
+/* prvi daje gridu3 2 stupca ako je prozor širi od 600px */
+/* srugi daje gridu3 3 stupca ako je prozor širi od 900px */
+
+@media (min-width: 600px) {
+    .grid3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .navigacija {
+      justify-self: end;
+    }
+    .grid4{
+      grid-template-columns: repeat(2,1fr);
+    }
+    input{width: 50vw;}
+textarea{width: 50vw;}
+  }
+  
+  @media (min-width: 900px) {
+    .grid3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .navigacija {
+      grid-column: 2/4;
+    }
+    .navigacija li {
+      display: inline;
+      margin-left: 2em;
+    }
+  }

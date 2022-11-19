@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanturist vježba</title>
+    <link rel="stylesheet" href="str2.css" />
+  </head>
+  <body>
+    <!-- u div se nalazi sve, dajemo mu grid1 da razdjelimo sav sadržaj na 3 djela(header,main,footer)  -->
+    <div class="grid1">
+      <!-- POČETAK HEADER  -->
+      <!-- headeru dajemo klasu grid2 tako da sadržaj bude u srednjem stupcu širine 300-1200px -->
+      <header class="grid2 header1">
+        <!-- radimo div element da bismo primijenili grid3 content-width vertical-align na header  -->
+        <div class="grid3 content-width vertical-align">
+          <h1>Avanturist</h1>
+          <!-- navigacija služi za podešavanje sa media queries -->
+          <nav class="navigacija">
+            <ul>
+              <li><a href="index.html">Naslovnica</a></li>
+              <li><a href="str2-o-nama.html">O nama</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- KRAJ HEADER POČETAK MAIN -->
+      <!-- main dajemo klasu grid2 tako da sav sadržaj bude u srednjem stupcu širine 300-1200px -->
+      <main class="grid2">
+        <!-- POČETAK BANNER -->
+        <section class="banner full-width">
+          <div class="overlay">
+            <div>
+              <h2>Doživite avanturu!</h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt, et, corporis deserunt dolor quae commodi laboriosam
+                vel modi a saepe provident officiis quidem quaerat similique.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- KRAJ BANNER -->
+        <!-- početak glavnog article u kome su naslov h2 i 6 posebnih article elemenata -->
+        <article class="content-width">
+          <h2 class="page-title">Izabrano za vas:</h2>
+          <div class="grid3">
+            <!-- svaki h3 naslov,paragraf i link je u posebnom article elementu -->
+            <article>
+              <img
+                src="slike/aurora.jpg"
+                alt="aurora"
+                width="640px"
+                height="360px"
+              />
+              <h3><a href="#">Lorem ipsum dolor</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus, harum obcaecati a autem quibusdam id laudantium.
+              </p>
+            </article>
+            <article>
+              <img
+                src="slike/aurora.jpg"
+                alt="aurora"
+                width="640px"
+                height="360px"
+              />
+              <h3><a href="#">Lorem ipsum dolor</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus, harum obcaecati a autem quibusdam id laudantium.
+              </p>
+            </article>
+            <article>
+              <img
+                src="slike/aurora.jpg"
+                alt="aurora"
+                width="640px"
+                height="360px"
+              />
+              <h3><a href="#">Lorem ipsum dolor</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus, harum obcaecati a autem quibusdam id laudantium.
+              </p>
+            </article>
+            <article>
+              <img
+                src="slike/aurora.jpg"
+                alt="aurora"
+                width="640px"
+                height="360px"
+              />
+              <h3><a href="#">Lorem ipsum dolor</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus, harum obcaecati a autem quibusdam id laudantium.
+              </p>
+            </article>
+            <article>
+              <img
+                src="slike/aurora.jpg"
+                alt="aurora"
+                width="640px"
+                height="360px"
+              />
+              <h3><a href="#">Lorem ipsum dolor</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus, harum obcaecati a autem quibusdam id laudantium.
+              </p>
+            </article>
+            <article>
+              <img
+                src="slike/aurora.jpg"
+                alt="aurora"
+                width="640px"
+                height="360px"
+              />
+              <h3><a href="#">Lorem ipsum dolor</a></h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus, harum obcaecati a autem quibusdam id laudantium.
+              </p>
+            </article>
+          </div>
+        </article>
+        <!-- KRAJ glavnog article u kome su ostali i naslov -->
+      </main>
+      <!-- KRAJ MAIN POČETAK FOOTER -->
+      <footer class="footer grid2">
+        <aside class="content-width grid3">
+          <ul>
+            <li><a href="#">Lorem ipsum dolor</a></li>
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet consectetur</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor</a></li>
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet consectetur</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor</a></li>
+            <li><a href="#">Lorem ipsum</a></li>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet consectetur</a></li>
+            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+          </ul>
+        </aside>
+        <!-- aside END -->
+        <p class="copyright full-width">Avanturist &copy; 2022.</p>
+      </footer>
+      <!-- KRAJ FOOTER -->
+    </div>
+  </body>
+</html>
